@@ -62,7 +62,7 @@ retention.head()
 
 
 
-# heapmap을 통해 retention파악
+# heatmap을 통해 retention파악
 
 plt.figure(figsize = (11,9))
 plt.title('Cohort Analysis - Retention Rate')
