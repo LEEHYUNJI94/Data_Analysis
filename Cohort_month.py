@@ -32,7 +32,7 @@ cohort_df=cohort_df[cohort_df['Period'].between(202001,202012)]
 Period 생성 
 # 3. int로 변경 후 last order yearmonth - first order yearmonth 
 !주의! 
-뺄샘을 사용해 period를 만들 경우는 동년 1년치만 가능 (그렇지 않을 경우 datetime 사용)
+뺄샘을 사용해 period를 만들 경우는 동년 1년치만 가능 (그렇지 않을 경우 datetime.strftime('%Y-%m') 사용)
 '''
 cohort_df["Period"]=cohort_df["Period"]-cohort_df["CohortGroup"]
 cohort_df.head()
