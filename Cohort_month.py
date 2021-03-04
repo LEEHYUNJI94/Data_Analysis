@@ -1,9 +1,6 @@
-#!/usr/bin/env python
 # coding: utf-8
 
-# ## year_month_Cohort분석(User Retention)
-
-# In[ ]:
+# year_month_Cohort분석(User Retention)
 
 
 import numpy as np
@@ -41,7 +38,6 @@ cohort_df["Period"]=cohort_df["Period"]-cohort_df["CohortGroup"]
 cohort_df.head()
 
 
-# In[ ]:
 
 
 '''
@@ -51,8 +47,6 @@ pivot 만들기
 pivot_table=cohort_df.pivot_table(index='CohortGroup', columns='Period',values="users",aggfunc="sum")
 pivot_table.head(27)
 
-
-# In[ ]:
 
 
 # a=pivot_table[:1]=round((pivot_table[:1]/pivot_table.iloc[0][0]),3)*100
@@ -66,8 +60,6 @@ cohort_size=pivot_table.iloc[:,0]
 retention=round((pivot_table.divide(cohort_size,axis=0)),3)
 retention.head()
 
-
-# In[5]:
 
 
 # heapmap을 통해 retention파악
